@@ -1,0 +1,62 @@
+export const projects = [
+  {
+    id: "terzi",
+    name: "TERZI",
+    year: "2026",
+    type: "Store design and development",
+    tags: ["Shopify", "Fashion"],
+    colors: ["#7A2A33", "#2A0E12"],
+    image: null,
+    platform: "Shopify",
+    role: "Design and development",
+    summary:
+      "A modern fashion storefront focused on clean product presentation and a simple path from browsing to checkout.",
+    did: [
+      "Homepage redesign",
+      "Product page optimization",
+      "Collection organization",
+      "Mobile responsive design",
+    ],
+    result: "[Add a real result. If this is a concept project, say so here.]",
+  },
+  {
+    id: "luna",
+    name: "LUNA",
+    year: "2026",
+    type: "Store design and development",
+    tags: ["Shopify", "Fashion"],
+    colors: ["#C98F86", "#5A1A22"],
+    image: null,
+    platform: "Shopify",
+    role: "Design and development",
+    summary:
+      "A soft, editorial storefront for a womenswear brand, built to let the photography lead.",
+    did: [
+      "Brand-led homepage",
+      "Lookbook style collections",
+      "Product page layout",
+      "Mobile first design",
+    ],
+    result: "[Add a real result. If this is a concept project, say so here.]",
+  },
+  {
+    id: "velora",
+    name: "Velora",
+    year: "2026",
+    type: "Store design and development",
+    tags: ["Shopify", "Beauty"],
+    colors: ["#8A6B5E", "#1A0B0D"],
+    image: null,
+    platform: "Shopify",
+    role: "Design and development",
+    summary:
+      "A calm, minimal store for a beauty and lifestyle brand, with a focus on trust and easy shopping.",
+    did: [
+      "Store structure",
+      "Product storytelling sections",
+      "Cart and checkout flow",
+      "Responsive implementation",
+    ],
+    result: "[Add a real result. If this is a concept project, say so here.]",
+  },
+]
