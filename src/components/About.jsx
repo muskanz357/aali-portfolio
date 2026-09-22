@@ -4,11 +4,11 @@ import { motion, useScroll, useTransform } from "motion/react"
 const ease = [0.22, 1, 0.36, 1]
 
 // When you have a photo, put it in the public folder and set it here,
-// for example "/muskan.jpg". Leave null to show the placeholder.
+// for example "/ali.jpg". Leave null to show the placeholder.
 const PHOTO = null
 
 const statement =
-  "I'm Muskan, a Shopify designer and developer creating clean, modern e-commerce experiences for fashion, beauty and lifestyle brands. I pair a designer's eye with practical development skills, so your store looks good and works well."
+  "AALI is Ali's design and development studio. I build interactive websites, from Shopify stores to other web projects, with an eye for clean layouts and smooth, thoughtful motion. I pair a designer's eye with practical development skills, so what I build looks good and works well."
 
 const words = statement.split(" ")
 
@@ -42,9 +42,9 @@ function About() {
         <div className="about-photo" ref={photoRef}>
           <motion.div className="about-photo-inner" style={{ y: imgY }}>
             {PHOTO ? (
-              <img src={PHOTO} alt="Muskan Naqvi" />
+              <img src={PHOTO} alt="Ali" />
             ) : (
-              <span>M</span>
+              <span>A</span>
             )}
           </motion.div>
 
@@ -60,7 +60,7 @@ function About() {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.8, ease }}
           >
-            The person behind the stores.
+            The person behind AALI.
           </motion.h2>
 
           <p className="about-statement" ref={textRef}>
