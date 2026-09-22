@@ -60,13 +60,58 @@ function Hero() {
           </motion.div>
         </div>
 
-        <motion.div
+                <motion.div
           className="hero-visual"
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.4, ease }}
+          onMouseMove={(e) => {
+            const box = e.currentTarget.getBoundingClientRect()
+            const px = (e.clientX - box.left) / box.width - 0.5
+            const py = (e.clientY - box.top) / box.height - 0.5
+            e.currentTarget.style.setProperty("--px", px.toFixed(3))
+            e.currentTarget.style.setProperty("--py", py.toFixed(3))
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.setProperty("--px", 0)
+            e.currentTarget.style.setProperty("--py", 0)
+          }}
         >
-          <p>Project mockup goes here</p>
+          <div className="mock-store">
+            <div className="mock-topbar">
+              <span className="mock-dot" />
+              <span className="mock-dot" />
+              <span className="mock-dot" />
+            </div>
+
+            <div className="mock-nav">
+              <span className="mock-logo">TERZI</span>
+              <span className="mock-links">
+                <em />
+                <em />
+                <em />
+              </span>
+              <span className="mock-cart" />
+            </div>
+
+            <div className="mock-banner">
+              <span className="mock-banner-title" />
+              <span className="mock-banner-sub" />
+            </div>
+
+            <div className="mock-grid">
+              <div className="mock-card">
+                <div className="mock-card-img" />
+                <span className="mock-card-name" />
+                <span className="mock-card-price" />
+              </div>
+              <div className="mock-card">
+                <div className="mock-card-img mock-card-img-alt" />
+                <span className="mock-card-name" />
+                <span className="mock-card-price" />
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

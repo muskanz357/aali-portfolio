@@ -110,9 +110,33 @@ a {
 }
 
 .nav-links a {
+  position: relative;
   text-decoration: none;
   color: var(--muted);
   font-size: 0.95rem;
+  padding-bottom: 4px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--blush-deep);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s ease;
+}
+
+.nav-links a:hover {
+  color: var(--ink);
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .nav-links a:hover {
@@ -1986,5 +2010,153 @@ button.btn {
 
   .work-name {
     font-size: clamp(1.8rem, 9vw, 2.6rem);
+  }
+}
+/* Hero visual: storefront mockup */
+.hero-visual {
+  --px: 0;
+  --py: 0;
+  perspective: 1000px;
+  padding: 28px;
+}
+
+.mock-store {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(232, 180, 160, 0.25);
+  border-radius: 20px;
+  overflow: hidden;
+  transform: translate(calc(var(--px) * -14px), calc(var(--py) * -14px));
+  transition: transform 0.25s ease-out;
+  box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.5);
+}
+
+.mock-topbar {
+  display: flex;
+  gap: 6px;
+  padding: 14px 16px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.mock-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(232, 180, 160, 0.35);
+}
+
+.mock-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 22px;
+  border-bottom: 1px solid rgba(232, 180, 160, 0.15);
+  transform: translate(calc(var(--px) * 6px), calc(var(--py) * 6px));
+  transition: transform 0.25s ease-out;
+}
+
+.mock-logo {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  color: var(--ink);
+  margin-right: auto;
+}
+
+.mock-links {
+  display: flex;
+  gap: 12px;
+}
+
+.mock-links em {
+  display: block;
+  width: 26px;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(232, 180, 160, 0.3);
+}
+
+.mock-cart {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid rgba(232, 180, 160, 0.35);
+}
+
+.mock-banner {
+  position: relative;
+  height: 150px;
+  margin: 18px;
+  border-radius: 14px;
+  background: linear-gradient(150deg, #7A2A33 0%, #2A0E12 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 22px;
+  transform: translate(calc(var(--px) * 10px), calc(var(--py) * 10px));
+  transition: transform 0.25s ease-out;
+}
+
+.mock-banner-title {
+  width: 62%;
+  height: 16px;
+  border-radius: 4px;
+  background: rgba(232, 180, 160, 0.85);
+}
+
+.mock-banner-sub {
+  width: 40%;
+  height: 9px;
+  border-radius: 4px;
+  background: rgba(232, 180, 160, 0.4);
+}
+
+.mock-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 0 18px 22px;
+  transform: translate(calc(var(--px) * 16px), calc(var(--py) * 16px));
+  transition: transform 0.25s ease-out;
+}
+
+.mock-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mock-card-img {
+  aspect-ratio: 4 / 5;
+  border-radius: 10px;
+  background: linear-gradient(160deg, #C98F86, #5A1A22);
+}
+
+.mock-card-img-alt {
+  background: linear-gradient(160deg, #8A6B5E, #1A0B0D);
+}
+
+.mock-card-name {
+  width: 70%;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(232, 180, 160, 0.3);
+}
+
+.mock-card-price {
+  width: 35%;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(232, 180, 160, 0.55);
+}
+
+@media (max-width: 700px) {
+  .hero-visual {
+    padding: 16px;
+  }
+
+  .mock-banner {
+    height: 110px;
+    margin: 14px;
   }
 }
