@@ -6,7 +6,7 @@
   --line: #4A2226;      /* borders and dividers */
   --blush: #5A1A22;     /* deep red accent blocks */
   --blush-deep: #E8B4A0; /* rose gold for small details */
-  --font-heading: "Cormorant Garamond", Georgia, serif;
+   --font-heading: "DM Sans", system-ui, sans-serif;
   --font-body: "DM Sans", system-ui, sans-serif;
 }
 
@@ -2159,4 +2159,15 @@ button.btn {
     height: 110px;
     margin: 14px;
   }
+}
+/* Subtle grain texture over the whole page */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0.35;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
 }
